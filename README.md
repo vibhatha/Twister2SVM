@@ -4,7 +4,7 @@
 
 This github resource can be used to install MPICH2
 
-https://github.com/wesleykendall/mpitutorial/blob/gh-pages/tutorials/installing-mpich2/index.md
+[MPICH2 Install Tutorial](https://github.com/wesleykendall/mpitutorial/blob/gh-pages/tutorials/installing-mpich2/index.md)
 
 Recommended MPI Version : 3.0.0
 
