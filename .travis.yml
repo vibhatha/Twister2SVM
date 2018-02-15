@@ -1,3 +1,17 @@
 language: c
 
-  
+install:
+- cd ${TRAVIS_BUILD_DIR}
+
+before_script:
+- cd ${TRAVIS_BUILD_DIR}
+
+compiler:
+  - clang
+  - gcc
+  - g++
+
+script:
+  - cd ${TRAVIS_BUILD_DIR}
+  - make
+
