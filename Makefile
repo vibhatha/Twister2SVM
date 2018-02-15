@@ -1,8 +1,12 @@
-BIN=../bin
+BASE=code
+BIN=bin
 EXECS=run
 #MPICC?=mpicc
+CC=gcc
 all: ${EXECS}
-run: run.c
-${MPICC} -o ${BIN}/run run.c
+
+run: ${BASE}/run.c
+	${CC} -o ${BIN}/run ${BASE}/run.c
+
 clean:
-    rm -f ${BIN}/${EXECS}
+	rm -f ${BIN}/${EXECS}
