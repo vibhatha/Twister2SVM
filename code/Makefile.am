@@ -1,0 +1,4 @@
+# LDFLAGS = -lm
+bin_PROGRAMS = targetbinary1
+targetbinary1_SOURCES = run.c
+
