@@ -3,6 +3,6 @@
 
 int main(int argc, char** argv) {
 
-printf("Run SVM...\n");
+printf("Hello SVM...\n");
 
 }
