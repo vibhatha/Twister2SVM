@@ -2,10 +2,13 @@ language: c
 
 os:
   - ubuntu
-
+  
 compiler:
-  - mpich2
- 
+  - gcc
+
+before_install:
+  - sudo apt-get install libcr-dev mpich2 mpich2-doc
+  
 script:
   - make
   - mpirun -np 4 .bin/mpi_program
