@@ -1,11 +1,20 @@
 language: c
 
+os:
+  - linux
+  - osx
+
 compiler:
   - clang
   - gcc
 
+env:
+  - MPI_IMPL=mpich
+  - MPI_IMPL=openmpi
+
 before_install:
-  - test -n $CC && unset CC
+  - sh ./conf/travis-install-mpi.sh $MPI_IMPL
+  - export PATH=$HOME/OpenMPI/bin:$PATH
 
 script:
   - make
