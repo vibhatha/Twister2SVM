@@ -15,9 +15,6 @@ OFLAG = -o
 
 all: $(PROG)
 
-install: all
-	@echo "installing the $(PROG) into $(bin) directory"; cp -f $(PROG) $(BIN)
-
 $(PROG) : $(OBJ)	
 	$(CC) $(OFLAG) $(PROG) $(OBJ) $(LFLAG)
 %.o : %.cpp
