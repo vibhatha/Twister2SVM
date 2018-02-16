@@ -12,7 +12,7 @@ before_install:
 script:
   - make
   - pwd
-  - ls
+  - ls /bin
   - mpirun -np 4 /bin/mpi_program
 
 
