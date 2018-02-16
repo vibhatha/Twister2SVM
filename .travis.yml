@@ -1,8 +1,8 @@
 language: c
 
 os:
-  - linux
-  - osx
+  - ubuntu
+  
 cache:
   directories:
   - mpich
@@ -12,11 +12,9 @@ compiler:
 
 before_install:
   - sh ./get_mpich.sh
-  - export MPI_LFLAG=./mpich/include
-  - export MPI_INCDIR=./mpich/lib
-
+  
 script:
   - make
-  - ./mpich/bin/mpirun -np 4 .bin/mpi_program
+  - mpirun -np 4 .bin/mpi_program
 
 
