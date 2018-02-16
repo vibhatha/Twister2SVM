@@ -1,7 +1,5 @@
 #This make file build the src folder
 PROG = mpi_program
-BIN = ../bin/
-bin = bin
 BASE = src
 
 # provide all the object files here
