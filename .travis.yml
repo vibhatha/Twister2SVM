@@ -11,7 +11,9 @@ before_install:
   
 script:
   - make
-  - cd /bin
+  - pwd
+  - ls
+  - cd /home/travis/build/kadupitiya/Twister2SVM/bin
   - mpirun -np 4 ./mpi_program
 
 
