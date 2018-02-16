@@ -3,19 +3,20 @@ language: c
 os:
   - linux
   - osx
+cache:
+  directories:
+  - mpich
 
 compiler:
-  - clang
   - gcc
 
-env:
-  - MPI_IMPL=mpich
-  - MPI_IMPL=openmpi
-
 before_install:
-  - sh ./conf/travis-install-mpi.sh $MPI_IMPL
-  - export PATH=$HOME/OpenMPI/bin:$PATH
+  - sh ./get_mpich.sh
+  - export MPI_LFLAG=./mpich/include
+  - export MPI_INCDIR=./mpich/lib
 
 script:
   - make
+  - ./mpich/bin/mpirun -np 4 .bin/mpi_program
+
 

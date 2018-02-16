@@ -9,8 +9,8 @@ OBJ = main.o
 
 # General purpose flags.
 CC = mpicxx -O3
-LFLAG = 
-CFLAG = -c
+LFLAG = -L${MPI_LFLAG}
+CFLAG = -c -I${MPI_INCDIR}
 OFLAG = -o
 
 all: $(PROG)
