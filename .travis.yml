@@ -2,17 +2,10 @@ language: c
 
 os:
   - ubuntu
-  
-cache:
-  directories:
-  - mpich
 
 compiler:
   - gcc
-
-before_install:
-  - sh ./get_mpich.sh
-  
+ 
 script:
   - make
   - mpirun -np 4 .bin/mpi_program
