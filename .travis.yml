@@ -11,6 +11,6 @@ before_install:
   
 script:
   - make
-  - mpirun -np 4 ./bin/mpi_program
+  - mpirun -np 4 /bin/mpi_program
 
 
