@@ -13,7 +13,6 @@ script:
   - make
   - pwd
   - ls
-  - cd /home/travis/build/kadupitiya/Twister2SVM/bin
-  - mpirun -np 4 ./mpi_program
+  - mpirun -np 4 /bin/mpi_program
 
 
