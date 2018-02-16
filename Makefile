@@ -1,12 +1,16 @@
-BASE=code
-BIN=bin
-EXECS=run
-#MPICC?=mpicc
-CC=gcc
-all: ${EXECS}
+#This make file build calls the sub folder make files
+PROG = mpi_program
+BIN = bin
+BASE = src
 
-run: ${BASE}/run.c
-	${CC} -o ${BIN}/run ${BASE}/run.c
-
+all:
+	@echo "Starting the Buiding of $(BIN) directory";
+	+$(MAKE) install -C $(BASE)
+	@echo "Ending the Buiding of $(BIN) directory";
+	
 clean:
-	rm -f ${EXECS}
+	rm -f $(BASE)/*.o
+	rm -f $(BASE)/$(PROG)
+	rm -f $(BIN)/$(PROG)
+
+.PHONY: all clean
