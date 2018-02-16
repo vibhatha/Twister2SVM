@@ -1,9 +1,15 @@
 language: c
 
+os:
+  - ubuntu
+  
 compiler:
-  - clang
   - gcc
 
+before_install:
+  - sudo apt-get install libcr-dev mpich2 mpich2-doc
+  
 script:
   - make
+
 
